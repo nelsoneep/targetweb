@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1, initial-scale=1.0">
+    <title>targetweb</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&family=Oswald:wght@200&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b3fb7e015b.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+    
+</head>
+<body>
+    <header>
+        <div class="logo"><i class="fa-regular fa-user"></i><Strong>target</Strong><span>web</span></div>  
+        
+    </header>
+    <main>
+        <div class="banner">
+            <div class="inner-wrap">
+                <h1>Freelance <br> Mobile first<br> development</h1>  
+            </div>          
+        </div>
+        <div class="block services">
+            <div class="inner-wrap">
+                <h2>Our services</h2>
+                <div class="service-list">
+                    <div class="service">
+                        <div class="icon">
+                            <i class="fa-sharp fa-solid fa-laptop-code"></i>
+                        </div>
+                        <div class="name">
+                            <h3>web dev</h3>
+                            <p>we offer web development to enable you show casse your product online </p>
+                        </div>
+                    </div>
+                    <div class="service">
+                        <div class="icon">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                        <div class="name">
+                            <h3>eCommerce</h3>
+                            <p>we understand the use of the website modal, and its usefulness to enable payment for your product</p>
+                        </div>
+                    </div>
+                    <div class="service">
+                        <div class="icon">
+                            <i class="fa-solid fa-flask"></i>
+                        </div>
+                        <div class="name">
+                            <h3>Testing</h3>
+                            <p>we understand the importance of fixing bugs with your website and monitor your your products online</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block primary">
+                <h2>About us</h2>
+                <p>we are a young company that takes pride in the work we do. we understand the importance of software to your business and make every effort to develop products that we are truly proud to call our own.</p>
+                <p>we are constantly growing and looking for the next big project. if you would like to work together please do not hesitate to get in touch.</p>
+                <p>p.s We are always on the lookout for talented devs.</p>
+            </div>
+            <div class="block contact">
+                <h2>Get in touch</h2>
+                <form action="">
+                    <label for="email" name="email">enter your email</label>
+                    <input type="email" name="email" placeholder="enter your email">
+                    <label for="message" name="message">enter your message</label>
+                    <textarea name="message" id=""></textarea>
+                    <button type="submit">send</button>
+                </form>
+            </div>
+        </div>
+        <div class="map">
+            <iframe
+               width="100%"
+               height="450"
+               style="border:0"
+               loading="lazy"
+               allowfullscreen
+               referrerpolicy="no-referrer-when-downgrade"
+               src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDeonIZRWSDvkVcEH6OJXufapw7Oy1zNgE
+                   &q=Space+Needle,Seattle+WA">
+           </iframe>
+        </div>
+    </main>
+    <footer>
+        &copy;targetweb
+    </footer>
+    
+    <script>
+        jQuery(jQuery('.service')[0]).fadeIn(1000, function(){
+            jQuery(jQuery('.service')[1]).fadeIn(1000, function(){
+                jQuery(jQuery('.service')[2]).fadeIn(1000, function(){
+            })  })  
+        });
+        setTimeout( function() {
+            jQuery('.logo span').css('margin-left','60px');
+            setTimeout(function(){
+                jQuery('.logo strong').fadeIn(2000)
+            },500);
+
+        },2000);
+
+        jQuery(window).scroll( function(){
+            if (window.scrollY > 150 ){
+                $('body').addClass('scrolling');
+            }else{
+                $('body').removeClass('scrolling');
+            }
+
+            var windowwidth = jQuery(window).width();
+            
+            if (windowwidth > 768){
+                $('.banner').css('background-position-y',(-200 * -window.scrollY * 0.4));
+
+            }else if (windowwidth > 1024){
+                    $('.banner').css('background-position-y',(-200 * -window.scrollY * 0.4));
+                
+            }else {
+                $('.banner').css('background-position-y',(-200 * -window.scrollY * 0.4));
+            }
+
+            
+        });
+
+        // jQuery('.logo strong').fadeIn(2000);
+
+
+
+    </script>
+</body>
+</html>
